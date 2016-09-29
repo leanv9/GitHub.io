@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% for post in site.posts reversed %}
+<div class="article">
+    <div class="well">
+        <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="content">
+            {{ post.content }}
+        </div>
+    </div>
+</div>
+{% endfor %}

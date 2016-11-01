@@ -8,7 +8,7 @@ description: "tui framework actionsheet"
 actionsheet
 ===
 
-actionsheet方法：`t.popup(popup_id, function(obj){})`   
+actionsheet方法：`t.popupAction(popup_id, function(obj){})`
 参数1：要弹出的div的id。  
 参数2：处理弹出后点击按钮的事件，其中`obj.action`为按钮的名称，用来判断用户点击了哪个按钮。
   

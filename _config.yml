@@ -12,7 +12,7 @@ url: http://scotte.github.io
 baseurl: 
 
 # This can be '' to hide the Github nav button
-github: 'scotte/jekyll-clean'
+github: 'tui9/tui'
 
 # Set this to your UA-# value, or '' to disable the block completely
 gaaccount: ''

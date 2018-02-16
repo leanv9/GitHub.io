@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tui Framework">
+    <meta name="description" content="tui framework 表单验证">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/doc.html">文档API</a></li>
+                    <li class="active"><a href="/about.html">关于我们</a></li>
+                    
+                      <li class="active"><a href="https://github.com/tui9/tui">Github</a></li>
+                    
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+    <h1>使用文档</h1>
+    <ul>
+        
+          <li><a href="/2016/02/route">路由</a></li>
+        
+          <li><a href="/2016/03/start">快速开始</a></li>
+        
+          <li><a href="/2016/03/page">页面布局</a></li>
+        
+          <li><a href="/2016/03/sideMenu">左侧菜单</a></li>
+        
+          <li><a href="/2016/03/form">表单</a></li>
+        
+          <li><a href="/2016/03/formvalidate">表单验证</a></li>
+        
+          <li><a href="/2016/03/botton">按钮</a></li>
+        
+          <li><a href="/2016/03/actionsheet">actionsheet</a></li>
+        
+          <li><a href="/2016/03/notice">通知</a></li>
+        
+          <li><a href="/2016/03/mask">遮盖板</a></li>
+        
+          <li><a href="/2016/03/list">列表</a></li>
+        
+          <li><a href="/2016/03/number">数字图标</a></li>
+        
+          <li><a href="/2016/03/slider">轮播图</a></li>
+        
+          <li><a href="/2016/03/select">多级联动</a></li>
+        
+          <li><a href="/2016/03/tabup">顶部工具栏</a></li>
+        
+          <li><a href="/2016/03/downpull">下拉刷新</a></li>
+        
+          <li><a href="/2016/03/uppull">自动刷新</a></li>
+        
+          <li><a href="/2016/03/article-image">图文</a></li>
+        
+          <li><a href="/2016/03/preload">加载图标</a></li>
+        
+          <li><a href="/2016/03/grid">九宫格</a></li>
+        
+          <li><a href="/2016/03/message">聊天</a></li>
+        
+          <li><a href="/2016/03/map">百度地图</a></li>
+        
+          <li><a href="/2016/03/echarts">图表</a></li>
+        
+          <li><a href="/2016/03/ionicons">图标</a></li>
+        
+          <li><a href="/2016/11/acount">用户</a></li>
+        
+          <li><a href="/2016/11/cache">缓存</a></li>
+        
+          <li><a href="/2016/11/filter">过滤器</a></li>
+        
+          <li><a href="/2016/11/pagetempcache">页面临时缓存</a></li>
+        
+          <li><a href="/2016/11/api">api</a></li>
+        
+          <li><a href="/2016/11/gc">gc</a></li>
+        
+          <li><a href="/2017/09/template">数据交互</a></li>
+        
+          <li><a href="/2018/02/setting">配置</a></li>
+        
+          <li><a href="/2018/02/alert">提示框</a></li>
+        
+          <li><a href="/2018/02/tab">底部工具栏</a></li>
+        
+          <li><a href="/2018/02/search">检索</a></li>
+        
+          <li><a href="/2018/02/send">数据交互</a></li>
+        
+    </ul>
+</div>
+        </div>
+        <div class="col-md-9">
+            <div class="article">
+                <div class="well">
+                    <h1><a href="/2016/03/formvalidate">表单验证</a></h1>
+                    
+                    <div class="post-content">
+                        <p>表单验证实例</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">	<span class="nx">t</span><span class="p">(</span><span class="s2">"#form_validate"</span><span class="p">).</span><span class="nx">validate</span><span class="p">({</span>
+		<span class="s2">"rules"</span><span class="p">:</span> <span class="p">{</span>
+			<span class="s2">"username"</span><span class="p">:</span> <span class="p">{</span><span class="na">require</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"请输入姓名"</span><span class="p">},</span> <span class="na">length</span><span class="p">:</span> <span class="p">{</span><span class="na">max</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">min</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="s2">"长度必须小于10大于1；"</span><span class="p">}},</span>
+			<span class="s2">"gender"</span><span class="p">:</span> <span class="p">{</span><span class="na">require</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"请输选择性别"</span><span class="p">}},</span>
+			<span class="s2">"remark"</span><span class="p">:</span> <span class="p">{</span><span class="na">require</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"请输入备注"</span><span class="p">}},</span>
+			<span class="s2">"phone"</span><span class="p">:</span> <span class="p">{</span><span class="na">phone</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"手机号不合法"</span><span class="p">}},</span>
+			<span class="s2">"cd"</span><span class="p">:</span> <span class="p">{</span><span class="na">cd</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"身份证不合法"</span><span class="p">}},</span>
+			<span class="s2">"number"</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="s2">"number"</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="s2">"不是整数"</span><span class="p">}},</span>
+			<span class="s2">"float"</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="s2">"float"</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="s2">"不是小数"</span><span class="p">}},</span>
+		<span class="p">},</span>
+		<span class="s2">"onerror"</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">){</span>
+			<span class="nx">alert</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">";"</span><span class="p">));</span>
+		<span class="p">}</span>
+	<span class="p">});</span></code></pre></figure>
+
+<p>调用form方法<code class="highlighter-rouge">.validate(params)</code>来实现对表单的验证。
+params参数说明，params总共由3个对象组成：rules，onerror，onsuccess。rules为验证规则、其他两个是成功和失败的事件。rules中的每一个对象都是form表单元素的name属性值。
+<code class="highlighter-rouge">rules</code>中验证说明
+======</p>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>参数名称</th>
+            <th>类型</th>
+            <th>默认</th>
+            <th>描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>require</td>
+            <td>json</td>
+            <td></td>
+            <td>不能为空。</td>
+        </tr>
+        <tr>
+            <td>length</td>
+            <td>json</td>
+            <td></td>
+            <td>长度，其中包括`max`最大长度和`min`最小长度。</td>
+        </tr>
+        <tr>
+            <td>phone</td>
+            <td>json</td>
+            <td></td>
+            <td>验证手机号。</td>
+        </tr>
+        <tr>
+            <td>cd</td>
+            <td>json</td>
+            <td></td>
+            <td>验证身份证号</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>json</td>
+            <td></td>
+            <td>验证类型，其中type类型包括：`number`整数型,`+number`正整数型,`-number`负整数型,`float`浮点型,`+float`正浮点型,`-float`负浮点型,`decimal`金钱类型</td>
+        </tr>
+        <tr>
+            <td>regex</td>
+            <td>Regexp</td>
+            <td></td>
+            <td>正则表达式验证，regex为正则表达式例如：/^-[0-9]*[1-9][0-9]*$/</td>
+        </tr>
+        <tr>
+            <td>message</td>
+            <td>string</td>
+            <td></td>
+            <td>为错误提示信息！`通用`</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 id="事件">事件</h1>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>事件名称</th>
+            <th>事件参数</th>
+            <th>事件描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>onerror</td>
+            <td>message：错误信息数组</td>
+            <td>当验证失败时触发。</td>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td></td>
+            <td>当验证成功时触发。</td>
+        </tr>
+    </tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                
+                <a class="btn btn-default" href="/2016/03/form" class="previous"><< 表单</a>
+                
+                
+                <a class="btn btn-default" href="/2016/03/botton" class="next">按钮 >></a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
+            <p class="copyright">&copy;2018 . Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
+            under
+            <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+

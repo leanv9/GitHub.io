@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tui Framework">
+    <meta name="description" content="">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/doc.html">文档API</a></li>
+                    <li class="active"><a href="/about.html">关于我们</a></li>
+                    
+                      <li class="active"><a href="https://github.com/tui9/tui">Github</a></li>
+                    
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+    <h1>使用文档</h1>
+    <ul>
+        
+          <li><a href="/2016/02/route">路由</a></li>
+        
+          <li><a href="/2016/03/start">快速开始</a></li>
+        
+          <li><a href="/2016/03/page">页面布局</a></li>
+        
+          <li><a href="/2016/03/sideMenu">左侧菜单</a></li>
+        
+          <li><a href="/2016/03/form">表单</a></li>
+        
+          <li><a href="/2016/03/formvalidate">表单验证</a></li>
+        
+          <li><a href="/2016/03/botton">按钮</a></li>
+        
+          <li><a href="/2016/03/actionsheet">actionsheet</a></li>
+        
+          <li><a href="/2016/03/notice">通知</a></li>
+        
+          <li><a href="/2016/03/mask">遮盖板</a></li>
+        
+          <li><a href="/2016/03/list">列表</a></li>
+        
+          <li><a href="/2016/03/number">数字图标</a></li>
+        
+          <li><a href="/2016/03/slider">轮播图</a></li>
+        
+          <li><a href="/2016/03/select">多级联动</a></li>
+        
+          <li><a href="/2016/03/tabup">顶部工具栏</a></li>
+        
+          <li><a href="/2016/03/downpull">下拉刷新</a></li>
+        
+          <li><a href="/2016/03/uppull">自动刷新</a></li>
+        
+          <li><a href="/2016/03/article-image">图文</a></li>
+        
+          <li><a href="/2016/03/preload">加载图标</a></li>
+        
+          <li><a href="/2016/03/grid">九宫格</a></li>
+        
+          <li><a href="/2016/03/message">聊天</a></li>
+        
+          <li><a href="/2016/03/map">百度地图</a></li>
+        
+          <li><a href="/2016/03/echarts">图表</a></li>
+        
+          <li><a href="/2016/03/ionicons">图标</a></li>
+        
+          <li><a href="/2016/11/acount">用户</a></li>
+        
+          <li><a href="/2016/11/cache">缓存</a></li>
+        
+          <li><a href="/2016/11/filter">过滤器</a></li>
+        
+          <li><a href="/2016/11/pagetempcache">页面临时缓存</a></li>
+        
+          <li><a href="/2016/11/api">api</a></li>
+        
+          <li><a href="/2016/11/gc">gc</a></li>
+        
+          <li><a href="/2017/09/template">数据交互</a></li>
+        
+          <li><a href="/2018/02/setting">配置</a></li>
+        
+          <li><a href="/2018/02/alert">提示框</a></li>
+        
+          <li><a href="/2018/02/tab">底部工具栏</a></li>
+        
+          <li><a href="/2018/02/search">检索</a></li>
+        
+          <li><a href="/2018/02/send">数据交互</a></li>
+        
+    </ul>
+</div>
+        </div>
+        <div class="col-md-9">
+            
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/11/acount">用户</a></h1>
+        <div class="content">
+            <h1 id="用户">用户</h1>
+
+<p><img src="/images/acount.png" width="300px" /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;ul&gt;</span>
+             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_left"</span><span class="nt">&gt;</span>
+                         <span class="nt">&lt;img</span> <span class="na">style=</span><span class="s">"width:80px;height:80px;"</span> <span class="na">src=</span><span class="s">"imgs/t1.jpeg"</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;/div&gt;</span>
+                     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_img_center"</span><span class="nt">&gt;</span>
+                         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>
+ 	                        	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content-text"</span><span class="nt">&gt;</span>
+ 	                        		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content-title"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"blue"</span><span class="nt">&gt;</span>我的车辆<span class="nt">&lt;/span&gt;</span><span class="ni">&amp;nbsp;&amp;nbsp;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"orange"</span><span class="nt">&gt;</span>费用200元<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+ 	                        		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content-sub-title"</span><span class="nt">&gt;&lt;span</span> <span class="na">style=</span><span class="s">"font-size: 14px;font-weight: 100;"</span><span class="nt">&gt;</span>载重量：15吨 | 超出：16元／公里<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+ 	                        <span class="nt">&lt;/div&gt;</span>
+                         <span class="nt">&lt;/div&gt;</span>
+                     <span class="nt">&lt;/div&gt;</span>
+                 <span class="nt">&lt;/div&gt;</span>
+             <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+         <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"split-range"</span><span class="nt">&gt;&lt;/div&gt;</span>
+ 	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content bg_white"</span><span class="nt">&gt;</span>
+ 		<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"block-btn"</span><span class="nt">&gt;</span>
+ 			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"width-50"</span><span class="nt">&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"middle middle_vertical"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-icon bg_orange2"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-ios-paper white middle"</span> <span class="na">style=</span><span class="s">"font-size: 25px;padding-top: 5px;"</span><span class="nt">&gt;&lt;/i&gt;&lt;/div&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-title"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;span&gt;</span>我的订单<span class="nt">&lt;/span&gt;</span>
+ 						<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"orange2"</span><span class="nt">&gt;</span>120<span class="nt">&lt;/p&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"width-50"</span><span class="nt">&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"middle middle_vertical"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-icon bg_red2"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-ios-people white middle"</span> <span class="na">style=</span><span class="s">"font-size: 25px;padding-top: 5px;"</span><span class="nt">&gt;&lt;/i&gt;&lt;/div&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-title"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;span&gt;</span>我的账户<span class="nt">&lt;/span&gt;</span>
+ 						<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"red"</span><span class="nt">&gt;</span>120<span class="nt">&lt;/p&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 		<span class="nt">&lt;/ul&gt;</span>
+ 		<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"block-btn"</span><span class="nt">&gt;</span>
+ 			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"width-50"</span><span class="nt">&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"middle middle_vertical"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-icon bg_violet"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-ios-recording white middle"</span> <span class="na">style=</span><span class="s">"font-size: 25px;padding-top: 5px;"</span><span class="nt">&gt;&lt;/i&gt;&lt;/div&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-title"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;span&gt;</span>我的评价<span class="nt">&lt;/span&gt;</span>
+ 						<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"radio_badge"</span><span class="nt">&gt;</span>120<span class="nt">&lt;/p&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 			<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"width-50"</span><span class="nt">&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"middle middle_vertical"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-icon bg_blue2"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-android-map white middle"</span> <span class="na">style=</span><span class="s">"font-size: 25px;padding-top: 5px;"</span><span class="nt">&gt;&lt;/i&gt;&lt;/div&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-title"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;span&gt;</span>我银行卡<span class="nt">&lt;/span&gt;</span>
+ 						<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"blue"</span><span class="nt">&gt;</span>120<span class="nt">&lt;/p&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 		<span class="nt">&lt;/ul&gt;</span>
+ 	<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"split-range"</span><span class="nt">&gt;&lt;/div&gt;</span>
+ 	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+ 		<span class="nt">&lt;ul&gt;</span>
+ 			<span class="nt">&lt;li&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+ 							<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>操作指南<span class="nt">&lt;/div&gt;</span>
+ 						<span class="nt">&lt;/div&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 			<span class="nt">&lt;li&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+ 							<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>服务标准<span class="nt">&lt;/div&gt;</span>
+ 						<span class="nt">&lt;/div&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 			<span class="nt">&lt;li&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+ 							<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>常见问题<span class="nt">&lt;/div&gt;</span>
+ 						<span class="nt">&lt;/div&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 			<span class="nt">&lt;li&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+ 							<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>收费标准<span class="nt">&lt;/div&gt;</span>
+ 						<span class="nt">&lt;/div&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 			<span class="nt">&lt;li&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+ 							<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>本月榜单<span class="nt">&lt;/div&gt;</span>
+ 						<span class="nt">&lt;/div&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 			<span class="nt">&lt;li&gt;</span>
+ 				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+ 					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+ 						<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+ 							<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>系统设置<span class="nt">&lt;/div&gt;</span>
+ 						<span class="nt">&lt;/div&gt;</span>
+ 					<span class="nt">&lt;/div&gt;</span>
+ 				<span class="nt">&lt;/a&gt;</span>
+ 			<span class="nt">&lt;/li&gt;</span>
+ 		<span class="nt">&lt;/ul&gt;</span>
+ 	<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/11/cache">缓存</a></h1>
+        <div class="content">
+            <h1 id="缓存">缓存</h1>
+<p>缓存框架为持久化缓存。从功能上分为数据缓存和页面缓存。
+<code class="highlighter-rouge">1.缓存数据</code>：通过<code class="highlighter-rouge">t.cache.data</code>类来对缓存数据进行操作。此类方法分为set设置 get获取 del删除。</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">t</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s2">"data_id"</span><span class="p">,</span> <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">11</span><span class="p">});</span>  <span class="c1">//设置缓存数据</span>
+    <span class="c1">//获取缓存数据</span>
+    <span class="nx">t</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"data_id"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">data</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">){</span>
+            <span class="c1">//data.result为缓存数据，即id为data.result.id</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="c1">//删除缓存数据</span>
+    <span class="nx">t</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">del</span><span class="p">(</span><span class="s2">"data_id"</span><span class="p">);</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">2.缓存页面</code>：通过<code class="highlighter-rouge">t.cache.page</code>类，对当前页面进行缓存。
+设置页面缓存</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">t</span><span class="p">.</span><span class="nx">onJump</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">t</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="kd">set</span><span class="p">();</span>  <span class="c1">//当页面跳转到下一页前缓存页面。</span>
+    <span class="p">}</span>
+
+    <span class="c1">//获取页面缓存，页面缓存即用即清理。</span>
+    <span class="nx">t</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="c1">//这里为获取缓存并渲染完毕后触发</span>
+    <span class="p">});</span></code></pre></figure>
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/11/filter">过滤器</a></h1>
+        <div class="content">
+            <h1 id="过滤器">过滤器</h1>
+<p>过滤器概念与其他语言相似。
+先把filter.js放在与tui.js同级目录下，filter.js说明如下。</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nb">window</span><span class="p">.</span><span class="nx">filters</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(){</span>
+    	<span class="k">return</span> <span class="p">[{</span><span class="na">after_filter</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+    		<span class="nx">t</span><span class="p">.</span><span class="nx">parameter</span><span class="p">(</span><span class="s2">"form"</span><span class="p">,</span> <span class="nx">t</span><span class="p">(</span><span class="s2">"form"</span><span class="p">).</span><span class="nx">serialize</span><span class="p">());</span>
+    		<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    	<span class="p">},</span> <span class="na">only</span><span class="p">:</span> <span class="p">[</span><span class="s2">"chafeng_new.html"</span><span class="p">]}];</span>
+    	<span class="cm">/**
+    	 * 过滤器配置，
+    	 */</span>
+    	<span class="cm">/*return [{before_filter: function(){
+    	        	alert("没有权限");
+    	        	return false;
+    	        }, only: ["index.html"]}];       //过滤器before_filter, after_filter, only: ["index.html","about.html"]只过滤某些文件，except: ["index.html","about.html"]排除某些文件all: true过滤所有，过滤文件夹only_dir: [], except_dir: []
+    	*/</span>
+    <span class="p">}</span></code></pre></figure>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="pagination">
+  
+      
+        <a class="btn btn-default" href="/page3" class="previous">上一页</a>
+      
+  
+  <span class="page_number ">Page: 4 of 12</span>
+  
+    <a class="btn btn-default" href="/page5" class="next">下一页</a>
+  
+</div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
+            <p class="copyright">&copy;2018 . Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
+            under
+            <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+

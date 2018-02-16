@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tui Framework">
+    <meta name="description" content="">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/doc.html">文档API</a></li>
+                    <li class="active"><a href="/about.html">关于我们</a></li>
+                    
+                      <li class="active"><a href="https://github.com/tui9/tui">Github</a></li>
+                    
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+    <h1>使用文档</h1>
+    <ul>
+        
+          <li><a href="/2016/02/route">路由</a></li>
+        
+          <li><a href="/2016/03/start">快速开始</a></li>
+        
+          <li><a href="/2016/03/page">页面布局</a></li>
+        
+          <li><a href="/2016/03/sideMenu">左侧菜单</a></li>
+        
+          <li><a href="/2016/03/form">表单</a></li>
+        
+          <li><a href="/2016/03/formvalidate">表单验证</a></li>
+        
+          <li><a href="/2016/03/botton">按钮</a></li>
+        
+          <li><a href="/2016/03/actionsheet">actionsheet</a></li>
+        
+          <li><a href="/2016/03/notice">通知</a></li>
+        
+          <li><a href="/2016/03/mask">遮盖板</a></li>
+        
+          <li><a href="/2016/03/list">列表</a></li>
+        
+          <li><a href="/2016/03/number">数字图标</a></li>
+        
+          <li><a href="/2016/03/slider">轮播图</a></li>
+        
+          <li><a href="/2016/03/select">多级联动</a></li>
+        
+          <li><a href="/2016/03/tabup">顶部工具栏</a></li>
+        
+          <li><a href="/2016/03/downpull">下拉刷新</a></li>
+        
+          <li><a href="/2016/03/uppull">自动刷新</a></li>
+        
+          <li><a href="/2016/03/article-image">图文</a></li>
+        
+          <li><a href="/2016/03/preload">加载图标</a></li>
+        
+          <li><a href="/2016/03/grid">九宫格</a></li>
+        
+          <li><a href="/2016/03/message">聊天</a></li>
+        
+          <li><a href="/2016/03/map">百度地图</a></li>
+        
+          <li><a href="/2016/03/echarts">图表</a></li>
+        
+          <li><a href="/2016/03/ionicons">图标</a></li>
+        
+          <li><a href="/2016/11/acount">用户</a></li>
+        
+          <li><a href="/2016/11/cache">缓存</a></li>
+        
+          <li><a href="/2016/11/filter">过滤器</a></li>
+        
+          <li><a href="/2016/11/pagetempcache">页面临时缓存</a></li>
+        
+          <li><a href="/2016/11/api">api</a></li>
+        
+          <li><a href="/2016/11/gc">gc</a></li>
+        
+          <li><a href="/2017/09/template">数据交互</a></li>
+        
+          <li><a href="/2018/02/setting">配置</a></li>
+        
+          <li><a href="/2018/02/alert">提示框</a></li>
+        
+          <li><a href="/2018/02/tab">底部工具栏</a></li>
+        
+          <li><a href="/2018/02/search">检索</a></li>
+        
+          <li><a href="/2018/02/send">数据交互</a></li>
+        
+    </ul>
+</div>
+        </div>
+        <div class="col-md-9">
+            
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/sideMenu">左侧菜单</a></h1>
+        <div class="content">
+            <h1 id="左侧菜单">左侧菜单</h1>
+
+<p>左侧菜单放置在<code class="highlighter-rouge">.current</code>里，在<code class="highlighter-rouge">.nav</code>上面即可。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"view"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"current"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- 左侧菜单 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"leftMenu"</span> <span class="na">class=</span><span class="s">"left_menu"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">style=</span><span class="s">"transform: translate3d(0px, 0px, 0px);"</span><span class="nt">&gt;</span>Tui FrameWork<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left_menu_content"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;ul&gt;</span>
+                            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                                    <span class="c">&lt;!--&lt;div class="item_left"&gt;&lt;/div&gt;--&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-title"</span><span class="nt">&gt;</span>With switch<span class="nt">&lt;/div&gt;</span>
+                                        <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+                                    <span class="nt">&lt;/div&gt;</span>
+                                <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                                    <span class="c">&lt;!--&lt;div class="item_left"&gt;&lt;/div&gt;--&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-title"</span><span class="nt">&gt;</span>With switch<span class="nt">&lt;/div&gt;</span>
+                                        <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+                                    <span class="nt">&lt;/div&gt;</span>
+                                <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                                    <span class="c">&lt;!--&lt;div class="item_left"&gt;&lt;/div&gt;--&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-title"</span><span class="nt">&gt;</span>With switch<span class="nt">&lt;/div&gt;</span>
+                                        <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+                                    <span class="nt">&lt;/div&gt;</span>
+                                <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;/ul&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- 顶部导航栏 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"back link"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-back"</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>back<span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">style=</span><span class="s">"left: -6.5px; transform: translate3d(0px, 0px, 0px);"</span><span class="nt">&gt;</span>Tui FrameWork<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"menuBtn"</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"menu_left"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-bars"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- 中间内容 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-pull"</span><span class="nt">&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+                    <span class="c">&lt;!-- 具体页面内容，ui组件 --&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content-bottom"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;script&gt;</span>
+                <span class="nx">t</span><span class="p">(</span><span class="s2">"#menuBtn"</span><span class="p">).</span><span class="nx">sideMenu</span><span class="p">(</span><span class="s2">"leftMenu"</span><span class="p">);</span>  <span class="c1">//设置按钮menuBtn所要打开的左侧菜单。</span>
+            <span class="nt">&lt;/script&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>左侧菜单html代码结构与current结构类似，也包含<code class="highlighter-rouge">.nav</code>（头部导航栏）和<code class="highlighter-rouge">.content</code>（具体内容）。根据我们的业务不同，可能会出现多组菜单，所以提供了可以滑出指定菜单的功能，</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">t</span><span class="p">(</span><span class="s2">"#menuBtn"</span><span class="p">).</span><span class="nx">sideMenu</span><span class="p">(</span><span class="s2">"leftMenu"</span><span class="p">);</span>  <span class="c1">//设置按钮menuBtn所要打开的左侧菜单。</span></code></pre></figure>
+
+<p>绑定id为menuBtn的a标签的滑出菜单id为leftMenu的菜单。</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/form">表单</a></h1>
+        <div class="content">
+            <h1 id="文本">文本</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Your text"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h1 id="多行文本">多行文本</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;textarea</span> <span class="na">rows=</span><span class="s">"10"</span> <span class="na">cols=</span><span class="s">"10"</span><span class="nt">&gt;&lt;/textarea&gt;</span></code></pre></figure>
+
+<h1 id="email">email</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Your email"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h1 id="密码">密码</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Your password"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h1 id="网址">网址</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"url"</span> <span class="na">placeholder=</span><span class="s">"Your url"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h1 id="电话">电话</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"Your tel"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h1 id="下拉">下拉</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;select&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Male<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Female<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span></code></pre></figure>
+
+<h1 id="开关">开关</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label-switch"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span></code></pre></figure>
+
+<h1 id="多选">多选</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"link_item checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_left"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"ck"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span> <span class="na">class=</span><span class="s">"lb-ck"</span><span class="nt">&gt;&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-input"</span><span class="nt">&gt;</span>
+                    多选样式1
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"link_item checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_left"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"ck"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkbox2"</span> <span class="na">class=</span><span class="s">"lb-ck-badge"</span><span class="nt">&gt;&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-input"</span><span class="nt">&gt;</span>
+                    多选样式2
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span></code></pre></figure>
+
+<h1 id="单选">单选</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"link_item radio"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-input col-90"</span><span class="nt">&gt;</span>
+                    单选样式1
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_btn middle col-10"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">id=</span><span class="s">"radio1"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"rd"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio1"</span> <span class="na">class=</span><span class="s">"lb-rd"</span><span class="nt">&gt;&lt;/label&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"link_item radio"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-input col-90"</span><span class="nt">&gt;</span>
+                    单选样式2
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_btn middle col-10"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">id=</span><span class="s">"radio2"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"rd"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio2"</span> <span class="na">class=</span><span class="s">"lb-rd"</span><span class="nt">&gt;&lt;/label&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span></code></pre></figure>
+
+<h1 id="日期">日期</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">placeholder=</span><span class="s">"2016-04-11"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h1 id="时间">时间</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"time"</span> <span class="na">placeholder=</span><span class="s">"11:11"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<h1 id="日期时间">日期时间</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"datetime-local"</span> <span class="na">placeholder=</span><span class="s">"2016-04-11"</span><span class="nt">&gt;</span></code></pre></figure>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/formvalidate">表单验证</a></h1>
+        <div class="content">
+            <p>表单验证实例</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">	<span class="nx">t</span><span class="p">(</span><span class="s2">"#form_validate"</span><span class="p">).</span><span class="nx">validate</span><span class="p">({</span>
+		<span class="s2">"rules"</span><span class="p">:</span> <span class="p">{</span>
+			<span class="s2">"username"</span><span class="p">:</span> <span class="p">{</span><span class="na">require</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"请输入姓名"</span><span class="p">},</span> <span class="na">length</span><span class="p">:</span> <span class="p">{</span><span class="na">max</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="na">min</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="s2">"长度必须小于10大于1；"</span><span class="p">}},</span>
+			<span class="s2">"gender"</span><span class="p">:</span> <span class="p">{</span><span class="na">require</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"请输选择性别"</span><span class="p">}},</span>
+			<span class="s2">"remark"</span><span class="p">:</span> <span class="p">{</span><span class="na">require</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"请输入备注"</span><span class="p">}},</span>
+			<span class="s2">"phone"</span><span class="p">:</span> <span class="p">{</span><span class="na">phone</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"手机号不合法"</span><span class="p">}},</span>
+			<span class="s2">"cd"</span><span class="p">:</span> <span class="p">{</span><span class="na">cd</span><span class="p">:</span> <span class="p">{</span><span class="na">message</span><span class="p">:</span> <span class="s2">"身份证不合法"</span><span class="p">}},</span>
+			<span class="s2">"number"</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="s2">"number"</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="s2">"不是整数"</span><span class="p">}},</span>
+			<span class="s2">"float"</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="s2">"float"</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="s2">"不是小数"</span><span class="p">}},</span>
+		<span class="p">},</span>
+		<span class="s2">"onerror"</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">){</span>
+			<span class="nx">alert</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">";"</span><span class="p">));</span>
+		<span class="p">}</span>
+	<span class="p">});</span></code></pre></figure>
+
+<p>调用form方法<code class="highlighter-rouge">.validate(params)</code>来实现对表单的验证。
+params参数说明，params总共由3个对象组成：rules，onerror，onsuccess。rules为验证规则、其他两个是成功和失败的事件。rules中的每一个对象都是form表单元素的name属性值。
+<code class="highlighter-rouge">rules</code>中验证说明
+======</p>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>参数名称</th>
+            <th>类型</th>
+            <th>默认</th>
+            <th>描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>require</td>
+            <td>json</td>
+            <td></td>
+            <td>不能为空。</td>
+        </tr>
+        <tr>
+            <td>length</td>
+            <td>json</td>
+            <td></td>
+            <td>长度，其中包括`max`最大长度和`min`最小长度。</td>
+        </tr>
+        <tr>
+            <td>phone</td>
+            <td>json</td>
+            <td></td>
+            <td>验证手机号。</td>
+        </tr>
+        <tr>
+            <td>cd</td>
+            <td>json</td>
+            <td></td>
+            <td>验证身份证号</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>json</td>
+            <td></td>
+            <td>验证类型，其中type类型包括：`number`整数型,`+number`正整数型,`-number`负整数型,`float`浮点型,`+float`正浮点型,`-float`负浮点型,`decimal`金钱类型</td>
+        </tr>
+        <tr>
+            <td>regex</td>
+            <td>Regexp</td>
+            <td></td>
+            <td>正则表达式验证，regex为正则表达式例如：/^-[0-9]*[1-9][0-9]*$/</td>
+        </tr>
+        <tr>
+            <td>message</td>
+            <td>string</td>
+            <td></td>
+            <td>为错误提示信息！`通用`</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 id="事件">事件</h1>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>事件名称</th>
+            <th>事件参数</th>
+            <th>事件描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>onerror</td>
+            <td>message：错误信息数组</td>
+            <td>当验证失败时触发。</td>
+        </tr>
+        <tr>
+            <td>onsuccess</td>
+            <td></td>
+            <td>当验证成功时触发。</td>
+        </tr>
+    </tbody>
+</table>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="pagination">
+  
+      
+        <a class="btn btn-default" href="/page10" class="previous">上一页</a>
+      
+  
+  <span class="page_number ">Page: 11 of 12</span>
+  
+    <a class="btn btn-default" href="/page12" class="next">下一页</a>
+  
+</div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
+            <p class="copyright">&copy;2018 . Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
+            under
+            <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+

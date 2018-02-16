@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tui Framework">
+    <meta name="description" content="">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/doc.html">文档API</a></li>
+                    <li class="active"><a href="/about.html">关于我们</a></li>
+                    
+                      <li class="active"><a href="https://github.com/tui9/tui">Github</a></li>
+                    
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+    <h1>使用文档</h1>
+    <ul>
+        
+          <li><a href="/2016/02/route">路由</a></li>
+        
+          <li><a href="/2016/03/start">快速开始</a></li>
+        
+          <li><a href="/2016/03/page">页面布局</a></li>
+        
+          <li><a href="/2016/03/sideMenu">左侧菜单</a></li>
+        
+          <li><a href="/2016/03/form">表单</a></li>
+        
+          <li><a href="/2016/03/formvalidate">表单验证</a></li>
+        
+          <li><a href="/2016/03/botton">按钮</a></li>
+        
+          <li><a href="/2016/03/actionsheet">actionsheet</a></li>
+        
+          <li><a href="/2016/03/notice">通知</a></li>
+        
+          <li><a href="/2016/03/mask">遮盖板</a></li>
+        
+          <li><a href="/2016/03/list">列表</a></li>
+        
+          <li><a href="/2016/03/number">数字图标</a></li>
+        
+          <li><a href="/2016/03/slider">轮播图</a></li>
+        
+          <li><a href="/2016/03/select">多级联动</a></li>
+        
+          <li><a href="/2016/03/tabup">顶部工具栏</a></li>
+        
+          <li><a href="/2016/03/downpull">下拉刷新</a></li>
+        
+          <li><a href="/2016/03/uppull">自动刷新</a></li>
+        
+          <li><a href="/2016/03/article-image">图文</a></li>
+        
+          <li><a href="/2016/03/preload">加载图标</a></li>
+        
+          <li><a href="/2016/03/grid">九宫格</a></li>
+        
+          <li><a href="/2016/03/message">聊天</a></li>
+        
+          <li><a href="/2016/03/map">百度地图</a></li>
+        
+          <li><a href="/2016/03/echarts">图表</a></li>
+        
+          <li><a href="/2016/03/ionicons">图标</a></li>
+        
+          <li><a href="/2016/11/acount">用户</a></li>
+        
+          <li><a href="/2016/11/cache">缓存</a></li>
+        
+          <li><a href="/2016/11/filter">过滤器</a></li>
+        
+          <li><a href="/2016/11/pagetempcache">页面临时缓存</a></li>
+        
+          <li><a href="/2016/11/api">api</a></li>
+        
+          <li><a href="/2016/11/gc">gc</a></li>
+        
+          <li><a href="/2017/09/template">数据交互</a></li>
+        
+          <li><a href="/2018/02/setting">配置</a></li>
+        
+          <li><a href="/2018/02/alert">提示框</a></li>
+        
+          <li><a href="/2018/02/tab">底部工具栏</a></li>
+        
+          <li><a href="/2018/02/search">检索</a></li>
+        
+          <li><a href="/2018/02/send">数据交互</a></li>
+        
+    </ul>
+</div>
+        </div>
+        <div class="col-md-9">
+            
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/02/route">路由</a></h1>
+        <div class="content">
+            <h1 id="路由">路由</h1>
+
+<p><code class="highlighter-rouge">Tui Framework</code> 页面为局部渲染，除了主页面index.html是完整的html之外，其他页面均是div块级，当请求新页面，自动渲染到index.html中。
+这意味着我们如果想混合开发app应用，我们也可以把所写的app html代码全部放在服务器端，只要在app首页执行跳转即可。如果想打包到手机中使用，
+服务器端需要开启跨域权限。
+<code class="highlighter-rouge">Tui Framework</code>的路由也与传统的路由不同，不需要过多复杂的配置，只需要在标签中定义需要跳转的<code class="highlighter-rouge">href</code>地址，添加<code class="highlighter-rouge">.route</code>类，就可以实现。例如：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"message.html?id=1"</span> <span class="na">class=</span><span class="s">"link_item route"</span><span class="nt">&gt;</span>消息<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<p>这时点击a就会跳转到message.html页面。</p>
+
+<h1 id="方法">方法</h1>
+<p><code class="highlighter-rouge">1.下一页</code>：在标签中增加<code class="highlighter-rouge">.route</code>的css类，href属性为下一页地址，当点击该a标签时实现跳转到下一页。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"message.html?id=1"</span> <span class="na">class=</span><span class="s">"link_item route"</span><span class="nt">&gt;</span>消息<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<p>如果我们把html文件打包到手机中，通常情况，我们会需要向跳转的页面传值提供两种传值方式：
+1.通过在href中的message.html?id=1网址传值
+2.也提供标签属性<code class="highlighter-rouge">params</code>只需要给params属性中设置需要传送的值即可，params权重比url高，可覆盖url中传值。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"order.html"</span> <span class="na">params=</span><span class="s">'{order_id: 15}'</span> <span class="na">class=</span><span class="s">"link_item route"</span><span class="nt">&gt;</span>订单详情<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<p>这样我们就可以在order订单详情页，通过request获取order_id的值。
+order.html</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;script&gt;</span>
+        <span class="kd">var</span> <span class="nx">order_id</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">order_id</span><span class="p">;</span>  <span class="c1">//获取order_id</span>
+    <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">2.自定义下一页</code>：除了含有<code class="highlighter-rouge">.route</code>类的a标签外，还提供自定义下一页方法：</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">t</span><span class="p">.</span><span class="nx">toNextPage</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>      <span class="c1">//参数url为下一页的地址，data为需要传递的数据，获取数据方法同上。</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">3.返回上一页</code>：
+3.1 在标签中添加<code class="highlighter-rouge">.back</code>的css类，url属性为上一页地址，当点击该a标签时实现返回上一页。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span> <span class="na">class=</span><span class="s">"back link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-back"</span> <span class="na">style=</span><span class="s">"transform: translate3d(0px, 0px, 0px);"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>3.2 除了自定义的返回地址之外，框架还提供自动返回功能。只需要去除href或者设置成”“即可实现自动返回上一页，并且携带当时传递参数的功能。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"back link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-back"</span> <span class="na">style=</span><span class="s">"transform: translate3d(0px, 0px, 0px);"</span><span class="nt">&gt;&lt;/i&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">4.自定义上一页</code>：除了含有<code class="highlighter-rouge">.back</code>类的a标签外，还提供自定义上一页方法：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    t.toPrePage(url, data);      //参数url为上一页的地址，data为需要传递的数据，获取数据方法同上。</code></pre></figure>
+
+<h1 id="事件">事件</h1>
+
+<p>标签中局部事件实例</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"order.html"</span> <span class="na">params=</span><span class="s">'{order_id: 15}'</span> <span class="na">onJump=</span><span class="s">"setval"</span> <span class="na">class=</span><span class="s">"link_item route"</span><span class="nt">&gt;</span>订单详情<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+        <span class="c1">//配置onJump触发事件</span>
+        <span class="kd">function</span> <span class="nx">setval</span><span class="p">(){</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>js中局部事件实例</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">t</span><span class="p">.</span><span class="nx">onBack</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="c1">//处理返回前事件</span>
+    <span class="p">}</span>
+    <span class="nx">t</span><span class="p">.</span><span class="nx">onJump</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="c1">//处理下一页返回事件</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>局部事件说明</p>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>事件名称</th>
+            <th>事件对象</th>
+            <th>事件描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>onJump</td>
+            <td>.route .back</td>
+            <td>此为标签中使用，当页面跳转前触发，为路由标签使用，此事件为局部事件，不可在全局事件中使用。</td>
+        </tr>
+        <tr>
+            <td>onBack</td>
+            <td>t</td>
+            <td>当页面返回上一页前触发，此事件为局部事件，不可在全局事件中使用。</td>
+        </tr>
+        <tr>
+            <td>onJump</td>
+            <td>t</td>
+            <td>当页面跳转下一页前触发，此事件为局部事件，不可在全局事件中使用。</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>添加全局事件实例：</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">t</span><span class="p">.</span><span class="nx">eventAdd</span><span class="p">(</span><span class="nx">action</span><span class="p">,</span> <span class="nx">onevent</span><span class="p">);</span> <span class="c1">//增加全局事件，事件对象为`.page`。参数action为事件名称，onevnet为事件委托。</span></code></pre></figure>
+
+<p>全局事件说明</p>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>事件名称</th>
+            <th>事件对象</th>
+            <th>事件描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>beforePre</td>
+            <td>.page</td>
+            <td>返回上一页之前触发。</td>
+        </tr>
+        <tr>
+            <td>afterPre</td>
+            <td>.page</td>
+            <td>返回上一页完成之后触发。</td>
+        </tr>
+        <tr>
+            <td>beforeNext</td>
+            <td>.page</td>
+            <td>跳转到下一页之前触发。</td>
+        </tr>
+        <tr>
+            <td>afterNext</td>
+            <td>.page</td>
+            <td>跳转到下一页完成之后触发。</td>
+        </tr>
+        <tr>
+            <td>load</td>
+            <td>.page</td>
+            <td>页面加载完成之后触发</td>
+        </tr>
+    </tbody>
+</table>
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/start">快速开始</a></h1>
+        <div class="content">
+            <h1 id="页面布局">页面布局</h1>
+
+<p><code class="highlighter-rouge">Tui Framework</code>本着简单易用敏捷高效为原则设计。页面之间通过局部渲染完成页面切换。 这意味着我们如果想混合开发app应用，我们也可以把所写的app html代码全部放在服务器端，只要在app首页执行跳转即可。
+ui布局也同样简单，只需要简单的组合就可以呈现app样式，让开发人员可把精力都放在业务逻辑上面。
+app布局，首先创建index.html文件为默认文件：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-status-bar-style"</span> <span class="na">content=</span><span class="s">"black"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Tui Framework<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery-1.12.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/javascript"</span> <span class="na">src=</span><span class="s">"js/tui.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/tui.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/ionicons.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="c">&lt;!-- view --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"view"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- 页面 --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- 当前页面，class为current的 --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"current"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- app头部 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">style=</span><span class="s">"left: -6.5px;"</span><span class="nt">&gt;</span>Tui FrameWork<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- app内容部分 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-pull"</span><span class="nt">&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;ul&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"message.html"</span> <span class="na">class=</span><span class="s">"link_item route"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                                <span class="c">&lt;!--&lt;div class="item_left"&gt;&lt;/div&gt;--&gt;</span>
+                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>聊天<span class="nt">&lt;/div&gt;</span>
+                                    <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+                                <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"regist.html"</span> <span class="na">class=</span><span class="s">"link_item route"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                                <span class="c">&lt;!--&lt;div class="item_left"&gt;&lt;/div&gt;--&gt;</span>
+                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>注册<span class="nt">&lt;/div&gt;</span>
+                                    <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+                                <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"login.html"</span> <span class="na">class=</span><span class="s">"link_item route"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                                <span class="c">&lt;!--&lt;div class="item_left"&gt;&lt;/div&gt;--&gt;</span>
+                                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center item_icon_right"</span><span class="nt">&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>登陆<span class="nt">&lt;/div&gt;</span>
+                                    <span class="c">&lt;!--&lt;div class="item_after"&gt;&lt;/div&gt;--&gt;</span>
+                                <span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content-bottom"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<h1 id="头部">头部</h1>
+
+<p>app头部div：<code class="highlighter-rouge">&lt;div class="nav"&gt; ... &lt;/div&gt;</code>。里面分为三块，左右中，左和右分别是放置icon按钮，中间为app标题。
+<code class="highlighter-rouge">&lt;div class="left"&gt;&lt;/div&gt;</code>左边、<code class="highlighter-rouge">&lt;div class="center" style="left: -6.5px;"&gt;Tui FrameWork&lt;/div&gt;</code>中间标题、<code class="highlighter-rouge">&lt;div class="right"&gt;&lt;/div&gt;</code>右边。
+中间标题位置可以通过left或者translate3d来设置。</p>
+
+<p><img src="/images/buju.png" width="300px;" /></p>
+
+<h1 id="内容">内容</h1>
+
+<p>app内容div：<code class="highlighter-rouge">&lt;div class="content"&gt; ... &lt;/div&gt;</code>，其中里面的<code class="highlighter-rouge">.page-content</code>是放置具体内容的。</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/page">页面布局</a></h1>
+        <div class="content">
+            <h1 id="页面布局">页面布局</h1>
+
+<p>页面布局结构 <code class="highlighter-rouge">.view</code> -&gt; <code class="highlighter-rouge">.page</code> -&gt; <code class="highlighter-rouge">.current</code>，<code class="highlighter-rouge">.current</code>中分为<code class="highlighter-rouge">.nva</code>头部导航栏、<code class="highlighter-rouge">.content</code>中间内容、<code class="highlighter-rouge">.toolbar</code>底部工具栏。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"view"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"current"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- 顶部导航栏 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"back link"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-back"</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>back<span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">style=</span><span class="s">"left: -6.5px; transform: translate3d(0px, 0px, 0px);"</span><span class="nt">&gt;</span>Tui FrameWork<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"menu_left"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-bars"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- 中间内容 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-pull"</span><span class="nt">&gt;&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+                    <span class="c">&lt;!-- 具体页面内容，ui组件 --&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content-bottom"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="c">&lt;!-- 底部工具栏 --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toolbar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link tab-link-active"</span> <span class="na">href=</span><span class="s">"#tab1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link"</span> <span class="na">href=</span><span class="s">"#tab2"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge bg_red"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/i&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link"</span> <span class="na">href=</span><span class="s">"#tab3"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link"</span> <span class="na">href=</span><span class="s">"#tab4"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p><img src="/images/tab.png" width="200px" /></p>
+
+<h1 id="头部导航栏">头部导航栏</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"back link"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-back"</span><span class="nt">&gt;&lt;/i&gt;&lt;span&gt;</span>back<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">style=</span><span class="s">"left: -6.5px; transform: translate3d(0px, 0px, 0px);"</span><span class="nt">&gt;</span>Tui FrameWork<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"menu_left"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-bars"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>app头部div：<code class="highlighter-rouge">&lt;div class="nav"&gt; ... &lt;/div&gt;</code>。里面分为三块，左右中，左和右分别是放置icon按钮，中间为app标题。
+<code class="highlighter-rouge">&lt;div class="left"&gt;&lt;/div&gt;</code>左边、<code class="highlighter-rouge">&lt;div class="center" style="left: -6.5px; transform: translate3d(0px, 0px, 0px);"&gt;Tui FrameWork&lt;/div&gt;</code>中间标题、<code class="highlighter-rouge">&lt;div class="right"&gt;&lt;/div&gt;</code>右边。
+中间标题位置可以通过left或者translate3d来设置。</p>
+
+<h1 id="中间内容">中间内容</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"head-pull"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- 具体页面内容，ui组件 --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content-bottom"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>app内容div：<code class="highlighter-rouge">&lt;div class="content"&gt; ... &lt;/div&gt;</code>，其中里面的<code class="highlighter-rouge">.page-content</code>是放置具体内容的。</p>
+
+<h1 id="底部工具栏">底部工具栏</h1>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toolbar"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link tab-link-active"</span> <span class="na">href=</span><span class="s">"#tab1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link"</span> <span class="na">href=</span><span class="s">"#tab2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge bg_red"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link"</span> <span class="na">href=</span><span class="s">"#tab3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"tab-link"</span> <span class="na">href=</span><span class="s">"#tab4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon ion-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>test<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>底部工具栏div：<code class="highlighter-rouge">&lt;div class="toolbar"&gt; ... &lt;/div&gt;</code>。</p>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="pagination">
+  
+      
+        <a class="btn btn-default" href="/page11" class="previous">上一页</a>
+      
+  
+  <span class="page_number ">Page: 12 of 12</span>
+  
+</div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
+            <p class="copyright">&copy;2018 . Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
+            under
+            <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+

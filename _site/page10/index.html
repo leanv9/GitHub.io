@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tui Framework">
+    <meta name="description" content="">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/doc.html">文档API</a></li>
+                    <li class="active"><a href="/about.html">关于我们</a></li>
+                    
+                      <li class="active"><a href="https://github.com/tui9/tui">Github</a></li>
+                    
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+    <h1>使用文档</h1>
+    <ul>
+        
+          <li><a href="/2016/02/route">路由</a></li>
+        
+          <li><a href="/2016/03/start">快速开始</a></li>
+        
+          <li><a href="/2016/03/page">页面布局</a></li>
+        
+          <li><a href="/2016/03/sideMenu">左侧菜单</a></li>
+        
+          <li><a href="/2016/03/form">表单</a></li>
+        
+          <li><a href="/2016/03/formvalidate">表单验证</a></li>
+        
+          <li><a href="/2016/03/botton">按钮</a></li>
+        
+          <li><a href="/2016/03/actionsheet">actionsheet</a></li>
+        
+          <li><a href="/2016/03/notice">通知</a></li>
+        
+          <li><a href="/2016/03/mask">遮盖板</a></li>
+        
+          <li><a href="/2016/03/list">列表</a></li>
+        
+          <li><a href="/2016/03/number">数字图标</a></li>
+        
+          <li><a href="/2016/03/slider">轮播图</a></li>
+        
+          <li><a href="/2016/03/select">多级联动</a></li>
+        
+          <li><a href="/2016/03/tabup">顶部工具栏</a></li>
+        
+          <li><a href="/2016/03/downpull">下拉刷新</a></li>
+        
+          <li><a href="/2016/03/uppull">自动刷新</a></li>
+        
+          <li><a href="/2016/03/article-image">图文</a></li>
+        
+          <li><a href="/2016/03/preload">加载图标</a></li>
+        
+          <li><a href="/2016/03/grid">九宫格</a></li>
+        
+          <li><a href="/2016/03/message">聊天</a></li>
+        
+          <li><a href="/2016/03/map">百度地图</a></li>
+        
+          <li><a href="/2016/03/echarts">图表</a></li>
+        
+          <li><a href="/2016/03/ionicons">图标</a></li>
+        
+          <li><a href="/2016/11/acount">用户</a></li>
+        
+          <li><a href="/2016/11/cache">缓存</a></li>
+        
+          <li><a href="/2016/11/filter">过滤器</a></li>
+        
+          <li><a href="/2016/11/pagetempcache">页面临时缓存</a></li>
+        
+          <li><a href="/2016/11/api">api</a></li>
+        
+          <li><a href="/2016/11/gc">gc</a></li>
+        
+          <li><a href="/2017/09/template">数据交互</a></li>
+        
+          <li><a href="/2018/02/setting">配置</a></li>
+        
+          <li><a href="/2018/02/alert">提示框</a></li>
+        
+          <li><a href="/2018/02/tab">底部工具栏</a></li>
+        
+          <li><a href="/2018/02/search">检索</a></li>
+        
+          <li><a href="/2018/02/send">数据交互</a></li>
+        
+    </ul>
+</div>
+        </div>
+        <div class="col-md-9">
+            
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/botton">按钮</a></h1>
+        <div class="content">
+            <h1 id="按钮">按钮</h1>
+
+<p>按钮<code class="highlighter-rouge">.btn</code>，小按钮<code class="highlighter-rouge">.btn-sm</code>。</p>
+
+<p>背景可选颜色：<code class="highlighter-rouge">.bg_blue .bg_green .bg_red .bg_orange .bg_pink .bg_purple .bg_cyan .bg_teal .bg_indigo</code></p>
+
+<p>文字可选颜色：<code class="highlighter-rouge">.blue .green .red .orange .pink .purple .cyan .teal .indigo</code></p>
+
+<p><img src="/images/btn1.png" /></p>
+
+<p>按钮宽度：宽度自适应，取决于外层div的宽度。一般配合col-*使用，结构是<code class="highlighter-rouge">.row</code> -&gt; <code class="highlighter-rouge">.col-*</code>，样式如下：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content inset"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"action.html"</span> <span class="na">class=</span><span class="s">"route btn bg_blue"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_green"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_red"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_orange"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_pink"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_purple"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_cyan"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_teal"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_indigo"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn red btn-border"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon btn-icon ion-android-add"</span> <span class="na">style=</span><span class="s">"top: 2px;"</span><span class="nt">&gt;&lt;/i&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn green"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn blue"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn pink"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn orange"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn purple"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn cyan"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn teal"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-30"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn indigo"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-50"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_green"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols-50"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_red"</span><span class="nt">&gt;</span>fsd<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-100"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_green"</span><span class="nt">&gt;</span>fsdss<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>同时也支持块状按钮</p>
+
+<p><img src="/images/btn2.png" /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>tuiFramework<span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_btn bg_red middle"</span><span class="nt">&gt;</span>2016-3-12<span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>tuiFramework<span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_btn bg_green middle"</span><span class="nt">&gt;</span>2016-3-12<span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"link_item"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_center"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item-content"</span><span class="nt">&gt;</span>tuiFramework<span class="nt">&lt;/div&gt;</span>
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item_btn bg_blue middle"</span><span class="nt">&gt;</span>2016-3-12<span class="nt">&lt;/div&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/actionsheet">actionsheet</a></h1>
+        <div class="content">
+            <h1 id="actionsheet">actionsheet</h1>
+
+<p>actionsheet方法：<code class="highlighter-rouge">t.popupAction(popup_id, function(obj){})</code>
+参数1：要弹出的div的id。<br />
+参数2：处理弹出后点击按钮的事件，其中<code class="highlighter-rouge">obj.action</code>为按钮的名称，用来判断用户点击了哪个按钮。</p>
+
+<p>样式1<br />
+<img src="/images/sheet1.png" width="300px" /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"action1"</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_teal"</span><span class="nt">&gt;</span>action1<span class="nt">&lt;/a&gt;</span>
+            
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"action-modal1"</span> <span class="na">class=</span><span class="s">"popup-action"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-title"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span> <span class="na">style=</span><span class="s">"width: 100%"</span><span class="nt">&gt;</span>tui framework<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-btn middle modal-btn"</span><span class="nt">&gt;</span>alert<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-btn middle modal-btn"</span><span class="nt">&gt;</span>cancel<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-btn middle modal-btn"</span><span class="nt">&gt;</span>config<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;script&gt;</span>
+        <span class="nx">t</span><span class="p">(</span><span class="s2">"#action1"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">t</span><span class="p">.</span><span class="nx">popupAction</span><span class="p">(</span><span class="s2">"action-modal1"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>样式2<br />
+<img src="/images/sheet2.png" width="300px" /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"action2"</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_blue"</span><span class="nt">&gt;</span>action2<span class="nt">&lt;/a&gt;</span>
+            
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"action-modal2"</span> <span class="na">class=</span><span class="s">"popup-action"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-title"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blue title-btn action-btn middle"</span><span class="nt">&gt;</span>取消<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span><span class="nt">&gt;</span>tui framework<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"title-btn blue action-btn middle"</span><span class="nt">&gt;</span>完成<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>
+                fdsajfdsafkjlsdalfkslafjdfdjaslkfd;safdlasjfdsafdsalkfdsafj;dsafjdls;afkdslafdasklf;dsjafjklsafjldsa;jfkldsa;fjdksla;fds123123<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span>
+                fdsajfdsafkjlsdalfkslafjd
+                fdjaslkfd;safdlasjfdsa
+                fdsalkfdsafj;dsafjdls;afkdsla
+                fdasklf;dsjafjklsafjldsa;
+                jfkldsa;fjdksla;fds
+            <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span>
+                fdsajfdsafkjlsdalfkslafjd
+                fdjaslkfd;safdlasjfdsa
+                fdsalkfdsafj;dsafjdls;afkdsla
+                fdasklf;dsjafjklsafjldsa;
+                jfkldsa;fjdksla;fds
+            <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;script&gt;</span>
+        <span class="nx">t</span><span class="p">(</span><span class="s2">"#action2"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">t</span><span class="p">.</span><span class="nx">popupAction</span><span class="p">(</span><span class="s2">"action-modal2"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>样式3<br />
+<img src="/images/sheet3.png" width="300px" /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"action3"</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_cyan"</span><span class="nt">&gt;</span>action3<span class="nt">&lt;/a&gt;</span>
+    
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"action-modal3"</span> <span class="na">class=</span><span class="s">"popup-action"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-title"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blue title-btn action-btn middle"</span><span class="nt">&gt;</span>取消<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center"</span><span class="nt">&gt;</span>tui framework<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"title-btn blue action-btn middle"</span><span class="nt">&gt;</span>完成<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-select"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"u1"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"u2"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"u3"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>fdsafsa<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;script&gt;</span>
+        <span class="nx">t</span><span class="p">(</span><span class="s2">"#action3"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">t</span><span class="p">.</span><span class="nx">popupAction</span><span class="p">(</span><span class="s2">"action-modal3"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>样式4<br />
+<img src="/images/sheet4.png" width="300px" /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"action4"</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"btn bg_cyan"</span><span class="nt">&gt;</span>透明<span class="nt">&lt;/a&gt;</span>
+    
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"action-4"</span> <span class="na">class=</span><span class="s">"popup-action popup-action-op"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-btn middle modal-btn"</span><span class="nt">&gt;</span>alert<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-btn middle modal-btn"</span><span class="nt">&gt;</span>cancel<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"action-btn middle modal-btn"</span><span class="nt">&gt;</span>config<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    
+    <span class="nt">&lt;script&gt;</span>
+        <span class="nx">t</span><span class="p">(</span><span class="s2">"#action4"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">t</span><span class="p">.</span><span class="nx">popupAction</span><span class="p">(</span><span class="s2">"action-4"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class="well">
+        <h1><a href="/2016/03/notice">通知</a></h1>
+        <div class="content">
+            <h1 id="通知">通知</h1>
+
+<p>系统通知方法：<code class="highlighter-rouge">t.notice(message, onNoticeClick)</code> <br />
+参数1：通知内容。<br />
+参数2：处理通知点击事件。</p>
+
+<p><img src="/images/notice1.png" width="300px" /></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">t</span><span class="p">(</span><span class="s2">"#notice"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">t</span><span class="p">.</span><span class="nx">notice</span><span class="p">(</span><span class="s2">"您有新的订单，请查看！"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+        <span class="p">});</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">});</span></code></pre></figure>
+
+<p>打开应用通知：<code class="highlighter-rouge">t.appNoticeOpen (message, noticeClickCallback)</code><br />
+参数1：message通知内容<br />
+参数2：通知点击事件<br />
+返回：通知的div节点
+关闭应用通知：<code class="highlighter-rouge">t.appNoticeClose (notice)</code><br />
+参数：notice通知的div节点</p>
+
+<p><img src="/images/notice2.png" width="300px" /></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    var app_notice = null;
+    t("#noticeShow").click(function () {
+        app_notice = t.appNoticeOpen("您有新的订单，请注意查看！！！");
+        return false;
+    });
+    t("#noticeHide").click(function () {
+        t.appNoticeClose(app_notice);
+        return false;
+    });</code></pre></figure>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="pagination">
+  
+      
+        <a class="btn btn-default" href="/page9" class="previous">上一页</a>
+      
+  
+  <span class="page_number ">Page: 10 of 12</span>
+  
+    <a class="btn btn-default" href="/page11" class="next">下一页</a>
+  
+</div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
+            <p class="copyright">&copy;2018 . Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
+            under
+            <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
